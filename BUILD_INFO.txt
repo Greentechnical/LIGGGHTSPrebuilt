@@ -1,0 +1,31 @@
+LIGGGHTS Windows Build Information
+==================================
+
+Project:    LIGGGHTS-PUBLIC
+Source:     https://github.com/CFDEMproject/LIGGGHTS-PUBLIC
+Commit:     3d5c00f20519e6bb6eb6756f51f1ad36564e649d
+Version:    LIGGGHTS-PUBLIC 3.8.0
+Compiled:   2026-02-20
+Platform:   Windows x64
+Toolchain:  CMake + Visual Studio (MSVC)
+Build:      MPI VTK SMALLBIG
+
+Modified files:
+- src/lmptype.h
+- src/lmpwindows.h
+
+Summary of modifications:
+- Added MSVC/Windows compatibility includes and definitions in src/lmptype.h
+- Added MSVC/Windows compatibility shims and definitions in src/lmpwindows.h
+
+Runtime prerequisites:
+- Microsoft Visual C++ Redistributable (vc_redist.x64.exe)
+- Microsoft MPI (MSMpiSetup.exe)
+
+Release packaging:
+- This repository contains the corresponding source code for the Windows release
+- The runnable Windows package is distributed separately as a GitHub Release asset
+
+Build status:
+- Unofficial Windows prebuilt distribution
+- Not affiliated with or endorsed by DCS Computing GmbH or the CFDEM project

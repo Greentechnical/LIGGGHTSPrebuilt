@@ -1,3 +1,21 @@
+/* ============================================================
+   Modified by Greentechnical on 2026-02-20.
+   Changes:
+   - Added <stdint.h>, <stddef.h>, and <cstdint> includes.
+   - Added a PTRDIFF_MAX fallback definition for MSVC/Windows
+     compilation compatibility.
+   Based on LIGGGHTS-PUBLIC commit:
+   3d5c00f20519e6bb6eb6756f51f1ad36564e649d
+   Original project:
+   https://github.com/CFDEMproject/LIGGGHTS-PUBLIC
+   ============================================================ */
+
+#include <stdint.h>
+#include <stddef.h>
+#ifndef PTRDIFF_MAX
+#define PTRDIFF_MAX INT64_MAX
+#endif
+
 /* ----------------------------------------------------------------------
     This is the
 
@@ -70,6 +88,7 @@
 #include "limits.h"
 #include <stdint.h>
 #include "inttypes.h"
+#include <cstdint>
 
 // grrr - IBM Power6 does not provide this def in their system header files
 
